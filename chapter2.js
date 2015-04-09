@@ -63,3 +63,9 @@ When you have a program that generates this pattern, define a variable size = 8 
 
 */
 
+var size=8;
+for (var i=0; i<=size; i++) {
+	for (var i=0; i<=size; i++) {
+		console.log('#');
+	}
+}
