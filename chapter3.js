@@ -23,9 +23,12 @@ Test it on 50 and 75. See how it behaves on -1. Why? Can you think of a way to f
 
 */
 
+import Math
+
 function isEven(n) {
-	if (abs(n) <= 1) {return abs(n) == 0;}
+	n = Math.abs(n);
+	if (n <= 1) {return n == 0;}
 	else {
-		return isEven(abs(n) - 2);
+		return isEven(n - 2);
 	}
 }
