@@ -28,7 +28,5 @@ import Math
 function isEven(n) {
 	n = Math.abs(n);
 	if (n <= 1) {return n == 0;}
-	else {
-		return isEven(n - 2);
-	}
+	else {return isEven(n - 2);}
 }
