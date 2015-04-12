@@ -53,3 +53,12 @@ Next, write a function called countChar that behaves like countBs, except it tak
 
 */
 
+function countBs(s) {
+
+}
+
+function countChar(s, c) {
+	var count = 0;
+	
+}
+
