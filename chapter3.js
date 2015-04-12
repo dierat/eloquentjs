@@ -54,11 +54,14 @@ Next, write a function called countChar that behaves like countBs, except it tak
 */
 
 function countBs(s) {
-
+	return countChar(s, 'B');
 }
 
 function countChar(s, c) {
 	var count = 0;
-	
+	for (var i=0; i<s.length; i++) {
+		if (s.charAt(i) == c) {count += 1;}
+	}
+	return count;
 }
 
