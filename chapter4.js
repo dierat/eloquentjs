@@ -16,8 +16,15 @@ As a bonus assignment, modify your range function to take an optional third argu
 function range(start, end, step) {
     if (!step) {var step = 1;}
 	var range = [];
-    for (var i = start; i <= end; i+= step) {
-    	range += i;
+	if (start < end) {
+	    for (var i = start; i <= end; i+= step) {
+	    	range += i;
+	    }
+	}
+    else {
+	    for (var i = start; i >= end; i+= step) {
+	    	range += i;
+	    }
     }
     return range;
 }
