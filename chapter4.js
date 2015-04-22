@@ -18,15 +18,23 @@ function range(start, end, step) {
 	var range = [];
 	if (start < end) {
 	    for (var i = start; i <= end; i+= step) {
-	    	range += i;
+	    	range.push(i);
 	    }
 	}
     else {
 	    for (var i = start; i >= end; i+= step) {
-	    	range += i;
+	    	range.push(i);
 	    }
     }
     return range;
+}
+
+function sum(array) {
+	var total = 0;
+	for (var i = 0; i < array.length; i++) {
+		total += array[i];
+	}
+	return total;
 }
 
 console.log(sum(range(1, 10)));
