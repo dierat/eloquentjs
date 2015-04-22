@@ -55,3 +55,12 @@ Thinking back to the notes about side effects and pure functions in the previous
 
 */
 
+function reverseArray(array) {
+	newArray = []
+	for (var i = 0; i < array.length; i++) {
+		newArray.unshift(array[i]);
+	}
+	return newArray;
+}
+
+function reverseArrayInPlace(array) {}
