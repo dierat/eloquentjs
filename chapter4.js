@@ -13,11 +13,15 @@ As a bonus assignment, modify your range function to take an optional third argu
 
 */
 
-function range(start, end) {
+function range(start, end, step) {
 	var range = [];
-    for (var i = start; i < end - start + 1; i++) {
+    for (var i = start; i <= end; i+= step) {
     	range += i;
     }
     return range;
 }
 
+console.log(sum(range(1, 10)));
+// → 55
+console.log(range(5, 2, -1));
+// → [5, 4, 3, 2]
