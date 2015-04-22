@@ -13,3 +13,11 @@ As a bonus assignment, modify your range function to take an optional third argu
 
 */
 
+function range(start, end) {
+	var range = [];
+    for (var i = start; i < end - start + 1; i++) {
+    	range += i;
+    }
+    return range;
+}
+
