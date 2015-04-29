@@ -37,6 +37,7 @@ function sum(array) {
 	return total;
 }
 
+
 console.log(sum(range(1, 10)));
 // → 55
 console.log(range(5, 2, -1));
@@ -63,4 +64,17 @@ function reverseArray(array) {
 	return newArray;
 }
 
-function reverseArrayInPlace(array) {}
+function reverseArrayInPlace(array) {
+	// cut array in half using Math.floor to round down
+	// then loop through and swap the elements from one half and the second half,
+	// going front-to-back in the first half and back-to-front in the second half
+	// then return the result
+}
+
+
+console.log(reverseArray(["A", "B", "C"]));
+// → ["C", "B", "A"];
+var arrayValue = [1, 2, 3, 4, 5];
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue);
+// → [5, 4, 3, 2, 1]
