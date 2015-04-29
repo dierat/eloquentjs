@@ -122,11 +122,10 @@ function arrayToList(array) {
 				value: array[0],
 				rest: null
 			};
-		}
-		else {
+		} else {
 			var new_obj = {
 				value: array[0],
-				rest: linkedList(array.slice(1:));
+				rest: linkedList(array.slice(1))
 			};
 		}
 	}
