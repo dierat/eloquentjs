@@ -66,9 +66,17 @@ function reverseArray(array) {
 
 function reverseArrayInPlace(array) {
 	// cut array in half using Math.floor to round down
+	var last_place = array.length - 1;
+	var half_length = Math.floor(array.length / 2);
 	// then loop through and swap the elements from one half and the second half,
 	// going front-to-back in the first half and back-to-front in the second half
+	for (var i=0; i++; i<=half_length) {
+		var temp = array[i];
+		array[i] = array[last_place - i];
+		array[last_place - i] = temp;
+	}
 	// then return the result
+	return array;
 }
 
 
