@@ -144,7 +144,8 @@ function listToArray(list) {
 }
 
 function nth(list, num) {
-
+	var new_array = listToArray(list);
+	return new_array[num];
 }
 
 console.log(arrayToList([10, 20]));
