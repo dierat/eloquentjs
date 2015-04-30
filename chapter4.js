@@ -127,6 +127,14 @@ function arrayToList(array) {
 	return list;
 }
 
+function prepend(elem, list) {
+	var new_list = {
+		value: elem,
+		rest: list
+	};
+	return new_list;
+}
+
 function listToArray(list) {
 
 }
