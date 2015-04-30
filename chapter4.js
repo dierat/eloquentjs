@@ -136,11 +136,15 @@ function prepend(elem, list) {
 }
 
 function listToArray(list) {
-
+	var new_array = [];
+	for (var node = list; node; node = node.rest) {
+		new_array.push(node.value);
+	}
+	return new_array;
 }
 
 function nth(list, num) {
-	
+
 }
 
 console.log(arrayToList([10, 20]));
