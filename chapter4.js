@@ -116,20 +116,7 @@ If you haven’t already, also write a recursive version of nth.
 */
 
 function arrayToList(array) {
-	function linkedList(array) {
-		if (array.length == 1) {
-			var new_obj = {
-				value: array[0],
-				rest: null
-			};
-		} else {
-			var new_obj = {
-				value: array[0],
-				rest: linkedList(array.slice(1))
-			};
-		}
-	}
-	return linkedList(array);
+	
 }
 
 function listToArray(list) {
