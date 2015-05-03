@@ -145,8 +145,11 @@ function listToArray(list) {
 
 function nth(list, num) {
 	var new_array = listToArray(list);
-	return new_array[num];
-}
+	if (new_array[num]) {
+		return new_array[num];
+	} else {
+		return undefined;
+	}
 
 function recursiveNth(list, num) {
 
