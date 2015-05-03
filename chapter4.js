@@ -118,11 +118,10 @@ If you haven’t already, also write a recursive version of nth.
 function arrayToList(array) {
 	var list = null;
 	for (var i=array.length-1; i>=0; i--) {
-		var new_obj = {
+		list = {
 			value: array[i],
 			rest: list
 		};
-		list = new_obj;
 	}
 	return list;
 }
