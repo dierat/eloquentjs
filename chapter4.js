@@ -182,7 +182,13 @@ To find out whether to compare two things by identity (use the === operator for 
 
 */
 
-
+function deepEqual(obj1, obj2) {
+	if (typeof(obj1) == 'object' && obj1 != null && typeof(obj2) == 'object' && obj2 != null) {
+		
+	} else {
+		return obj1 === obj2;
+	}
+}
 
 var obj = {here: {is: "an"}, object: 2};
 console.log(deepEqual(obj, obj));
