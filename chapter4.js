@@ -182,19 +182,28 @@ To find out whether to compare two things by identity (use the === operator for 
 
 */
 
-function deepEqual(obj1, obj2) {
-	if (typeof(obj1) == 'object' && obj1 != null && typeof(obj2) == 'object' && obj2 != null) {
-		var obj1_len = 0, obj2_len = 0;
-		for (key in obj1) {obj1_len++;}
-		for (key in obj2) {obj2_len++;}
-		if (obj1_len != obj2_len) {return false;}
-		for (key in obj1) {
-			if (!obj2.hasOwnProperty(key)) {return false;}
-		}
-		for (key in obj1) {return deepEqual(obj1.key, obj2.key);}
-	} else {
-		return obj1 === obj2;
-	}
+function deepEqual(a, b) {
+  if (a === b) {return true;}
+  
+  if (a == null || typeof a != "object" ||
+      b == null || typeof b != "object") {
+    return false;
+  }
+
+  var propsInA = 0, propsInB = 0;
+
+  for (var prop in a) {
+    propsInA += 1;
+   }
+
+  for (var prop in b) {
+    propsInB += 1;
+    if (!(prop in a) || !deepEqual(a[prop], b[prop])) {
+      return false;
+    }
+  }
+
+  return propsInA == propsInB;
 }
 
 var obj = {here: {is: "an"}, object: 2};
