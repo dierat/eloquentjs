@@ -184,7 +184,15 @@ To find out whether to compare two things by identity (use the === operator for 
 
 function deepEqual(obj1, obj2) {
 	if (typeof(obj1) == 'object' && obj1 != null && typeof(obj2) == 'object' && obj2 != null) {
-		
+		var obj1_len = 0;
+		for (key in obj1) {obj1_len++;}
+		var obj2_len = 0;
+		for (key in obj2) {obj2_len++;}
+		if (obj1_len != obj2_len) {return false;}
+		for (key in obj1) {
+			if (!obj2.hasOwnProperty(key)) {return false;}
+		}
+		for (key in obj1) {return deepEqual(obj1.key, obj2.key);}
 	} else {
 		return obj1 === obj2;
 	}
