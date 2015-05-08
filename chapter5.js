@@ -75,8 +75,8 @@ function historical_life_expenctancy() {
 
 }
 
-function groupBy() {
-
+function groupBy(array, func) {
+	// computes the group for an element in the array and returns an object that maps group names to arrays of group members
 }
 
 // → 16: 43.5
@@ -98,7 +98,19 @@ Write two functions, every and some, that behave like these methods, except that
 
 */
 
+function every(array, test) {
+	// loops through array, running test on each value
+	// if test is false, return false, else pass
+	// return true at end of function (if none of the tests failed)
 
+}
+
+function some(array, test) {
+	// loops through array, running test on each value
+	// if test is true, return true, else pass
+	// return false at end of function (if none of the tests passed)
+
+}
 
 console.log(every([NaN, NaN, NaN], isNaN));
 // → true
