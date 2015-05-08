@@ -40,7 +40,13 @@ function average_mom_child_dif() {
 	// first you need to find the ages of mothers when their children were born
 	// start with defining an array to hold the ages, then loop through all the people in ancestry and find out if that person's mother is present in the byName object. if she is, compute the mother's age at the time of the person's birth by subtracting the year of the person's birth from the year of her birth and add that to an array
 	// then run the mother/child age dif array through average and return the result
-
+	var ages = [];
+	for (var i=0; i<ancestry.length; i++) {
+		if (ancestry[i].mother in byName) {
+			ages.push(ancestry[i].born - byName[ancestry[i].mother].born);
+		}
+	}
+	return average(ages);
 }
 
 // → 31.2
