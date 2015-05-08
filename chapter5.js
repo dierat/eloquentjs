@@ -11,6 +11,7 @@ var arrays = [[1, 2, 3], [4, 5], [6]];
 function flatten() {
 	// look at the sum example in the book if needed
 	// basically you cocat each array with the next as if you were adding them together
+	
 }
 
 // → [1, 2, 3, 4, 5, 6]
@@ -38,7 +39,12 @@ ancestry.forEach(function(person) {
   byName[person.name] = person;
 });
 
+function average_mom_child_dif() {
+	// first you need to find the ages of mothers when their children were born
+	// for that you need to loop through all the people in ancestry and find out if that person's mother is present in the byName object, then compute the mother's age at the time of the person's birth by subtracting the year of the person's birth from the year of her birth and add that to an array
+	// then run the mother/child age dif array through average and return the result
 
+}
 
 // → 31.2
 
@@ -61,7 +67,12 @@ function average(array) {
   return array.reduce(plus) / array.length;
 }
 
+function historical_life_expenctancy() {
+	// loop through the ancestry array and decide which century each person belongs to using the formula given
+	// either define the array for each century first and use filter for each separate array, or go through the ancestry array once and separate it. the latter is probably faster but the former is cleaner
+	// then run each century's array through the average function and return it
 
+}
 
 // → 16: 43.5
 //   17: 51.2
