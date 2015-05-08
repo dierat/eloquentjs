@@ -11,7 +11,7 @@ var arrays = [[1, 2, 3], [4, 5], [6]];
 function flatten() {
 	// look at the sum example in the book if needed
 	// basically you cocat each array with the next as if you were adding them together
-	
+
 }
 
 // → [1, 2, 3, 4, 5, 6]
@@ -70,7 +70,12 @@ function average(array) {
 function historical_life_expenctancy() {
 	// loop through the ancestry array and decide which century each person belongs to using the formula given
 	// either define the array for each century first and use filter for each separate array, or go through the ancestry array once and separate it. the latter is probably faster but the former is cleaner
+	// or write the groupBy function to start with and use that
 	// then run each century's array through the average function and return it
+
+}
+
+function groupBy() {
 
 }
 
