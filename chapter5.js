@@ -68,15 +68,18 @@ function average(array) {
 }
 
 function historical_life_expenctancy() {
-	// loop through the ancestry array and decide which century each person belongs to using the formula given
-	// either define the array for each century first and use filter for each separate array, or go through the ancestry array once and separate it. the latter is probably faster but the former is cleaner
-	// or write the groupBy function to start with and use that
+	// loop through the ancestry array and decide which century each person belongs to using the formula given passed to the groupBy function
 	// then run each century's array through the average function and return it
 
 }
 
 function groupBy(array, func) {
 	// computes the group for an element in the array and returns an object that maps group names to arrays of group members
+	// I guess what you should do is define an object to hold century groups, then loop through ancestry and determine the century for each person. if that century is not currently a key in the centuries objects, add it
+	// otherwise just add the person's age as a value to the array associated with that century
+	// then return the centuries object with all the ages neatly grouped by century
+	// keep in mind that the age property, and century formula will be given via the func argument
+
 }
 
 // → 16: 43.5
