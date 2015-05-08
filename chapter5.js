@@ -9,8 +9,7 @@ Use the reduce method in combination with the concat method to “flatten” an 
 var arrays = [[1, 2, 3], [4, 5], [6]];
 
 function flatten() {
-	// look at the sum example in the book if needed
-	// basically you cocat each array with the next as if you were adding them together
+	// cocat each array with the next as if you were adding them together
 
 }
 
@@ -41,7 +40,7 @@ ancestry.forEach(function(person) {
 
 function average_mom_child_dif() {
 	// first you need to find the ages of mothers when their children were born
-	// for that you need to loop through all the people in ancestry and find out if that person's mother is present in the byName object, then compute the mother's age at the time of the person's birth by subtracting the year of the person's birth from the year of her birth and add that to an array
+	// start with defining an array to hold the ages, then loop through all the people in ancestry and find out if that person's mother is present in the byName object. if she is, compute the mother's age at the time of the person's birth by subtracting the year of the person's birth from the year of her birth and add that to an array
 	// then run the mother/child age dif array through average and return the result
 
 }
