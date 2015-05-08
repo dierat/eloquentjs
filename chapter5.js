@@ -9,7 +9,8 @@ Use the reduce method in combination with the concat method to “flatten” an 
 var arrays = [[1, 2, 3], [4, 5], [6]];
 
 function flatten() {
-
+	// look at the sum example in the book if needed
+	// basically you cocat each array with the next as if you were adding them together
 }
 
 // → [1, 2, 3, 4, 5, 6]
