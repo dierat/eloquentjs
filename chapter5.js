@@ -8,10 +8,8 @@ Use the reduce method in combination with the concat method to “flatten” an 
 
 var arrays = [[1, 2, 3], [4, 5], [6]];
 
-function flatten() {
-	// cocat each array with the next as if you were adding them together
-
-}
+// cocat each array with the next as if you were adding them together
+arrays.reduce(function(a,b) {return a.concat(b)});
 
 // → [1, 2, 3, 4, 5, 6]
 
