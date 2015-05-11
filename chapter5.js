@@ -95,10 +95,10 @@ centuries = {'16': [{person1}{person2}{person3}], '17': [], }
 
 function groupBy(array, func) {
 	// computes the group for an element in the array and returns an object that maps group names to arrays of group members
-	// I guess what you should do is define an object to hold century groups, then loop through ancestry and determine the century for each person. if that century is not currently a key in the centuries objects, add it
+	// define an object to hold century groups, then loop through ancestry and determine the century for each person. if that century is not currently a key in the centuries objects, add it
 	// otherwise just add the person's age as a value to the array associated with that century
 	// then return the centuries object with all the ages neatly grouped by century
-	// keep in mind that the age property, and century formula will be given via the func argument
+	// keep in mind that the age property and century formula will be given via the func argument
 	var groups = {};
 	for (var i=0; i<array.length; i++) {
 		var group = func(array[i]);
@@ -108,6 +108,20 @@ function groupBy(array, func) {
 			groups[group].push(array[i]);
 		}
 	}
+	return groups;
+}
+
+function groupBy2(array, func) {
+	// replace looping mechanism with map
+	var groups = {};
+	array.map(function(person) {
+		var group = func(person);
+		if (!group in groups) {
+			groups[group] = person;
+		} else {
+			groups[group].push(person);
+		}
+	});
 	return groups;
 }
 
