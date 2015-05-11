@@ -155,6 +155,14 @@ function every(array, test) {
 	return true;
 }
 
+function every2(array, test) {
+	// replace loop with call to forEach
+	array.forEach(function(val) {
+		if (!test(val) {return false;}
+	});
+	return true;
+}
+
 function some(array, test) {
 	// loops through array, running test on each value
 	// if test is true, return true, else pass
