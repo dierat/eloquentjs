@@ -84,7 +84,7 @@ function average(array) {
 function historical_life_expenctancy(array) {
 	// loop through the ancestry array and decide which century each person belongs to using the formula given passed to the groupBy function
 	// then run each century's array through the average function and return it
-	var centuries = groupBy(array, function(person) {return Math.ceil(person.died / 100).toString();})
+	var centuries = groupBy2(array, function(person) {return Math.ceil(person.died / 100).toString();})
 	for (century in centuries) {
       	console.log(century + ":", average(centuries[century].map(function(person) {
 			return person.died - person.born;
@@ -115,8 +115,8 @@ function groupBy2(array, func) {
 	var groups = {};
 	array.map(function(person) {
 		var group = func(person);
-		if (!group in groups) {
-			groups[group] = person;
+		if (!(group in groups)) {
+			groups[group] = [person];
 		} else {
 			groups[group].push(person);
 		}
