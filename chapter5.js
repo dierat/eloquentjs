@@ -112,7 +112,7 @@ function groupBy(array, func) {
 }
 
 function groupBy2(array, func) {
-	// replace looping mechanism with map
+	// replace looping mechanism with a call to map
 	var groups = {};
 	array.map(function(person) {
 		var group = func(person);
@@ -124,6 +124,8 @@ function groupBy2(array, func) {
 	});
 	return groups;
 }
+
+console.log(historical_life_expenctancy(ancestry));
 
 // → 16: 43.5
 //   17: 51.2
