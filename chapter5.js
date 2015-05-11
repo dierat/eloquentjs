@@ -84,16 +84,13 @@ function average(array) {
 function historical_life_expenctancy(array) {
 	// loop through the ancestry array and decide which century each person belongs to using the formula given passed to the groupBy function
 	// then run each century's array through the average function and return it
-	var centuries = groupBy(array, function(person) {return toString(Math.ceil(person.died / 100));})
+	var centuries = groupBy(array, function(person) {return Math.ceil(person.died / 100).toString();})
 	for (century in centuries) {
-		return average(centuries[century].map(function(person) {
+      	console.log(century + ":", average(centuries[century].map(function(person) {
 			return person.died - person.born;
-		}));
+        })));
 	}
 }
-
-centuries = {'16': [{person1}{person2}{person3}], '17': [], }
-
 
 function groupBy(array, func) {
 	// computes the group for an element in the array and returns an object that maps group names to arrays of group members
@@ -104,7 +101,7 @@ function groupBy(array, func) {
 	var groups = {};
 	for (var i=0; i<array.length; i++) {
 		var group = func(array[i]);
-		if (!group in groups) {
+		if (!(group in groups)) {
 			groups[group] = [array[i]];
 		} else {
 			groups[group].push(array[i]);
@@ -127,7 +124,7 @@ function groupBy2(array, func) {
 	return groups;
 }
 
-console.log(historical_life_expenctancy(ancestry));
+historical_life_expenctancy(ancestry);
 
 // → 16: 43.5
 //   17: 51.2
