@@ -167,7 +167,10 @@ function some(array, test) {
 	// loops through array, running test on each value
 	// if test is true, return true, else pass
 	// return false at end of function (if none of the tests passed)
-
+	array.forEach(function(val) {
+		if (test(val) {return true;}
+	});
+	return false;
 }
 
 console.log(every([NaN, NaN, NaN], isNaN));
