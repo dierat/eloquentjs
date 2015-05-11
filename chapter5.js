@@ -158,7 +158,7 @@ function every(array, test) {
 function every2(array, test) {
 	// replace loop with call to forEach
 	array.forEach(function(val) {
-		if (!test(val) {return false;}
+		if (!test(val)) {return false;}
 	});
 	return true;
 }
@@ -168,7 +168,7 @@ function some(array, test) {
 	// if test is true, return true, else pass
 	// return false at end of function (if none of the tests passed)
 	array.forEach(function(val) {
-		if (test(val) {return true;}
+		if (test(val)) {return true;}
 	});
 	return false;
 }
