@@ -149,7 +149,10 @@ function every(array, test) {
 	// loops through array, running test on each value
 	// if test is false, return false, else pass
 	// return true at end of function (if none of the tests failed)
-
+	for (var i=0; i<array.length; i++) {
+		if (!test(array[i])) {return false;}
+	}
+	return true;
 }
 
 function some(array, test) {
