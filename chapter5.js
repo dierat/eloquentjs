@@ -86,7 +86,9 @@ function historical_life_expenctancy(array) {
 	// then run each century's array through the average function and return it
 	var centuries = groupBy(array, function(person) {return toString(Math.ceil(person.died / 100));})
 	for (century in centuries) {
-		return average(centuries[century]);
+		return average(centuries[century].map(function(person) {
+			return person.died - person.born;
+		}));
 	}
 }
 
