@@ -69,6 +69,15 @@ function reverseArray(array) {
 	return newArray;
 }
 
+// rewritten to use a higher order function in place of loop
+function reverseArray2(array) {
+	newArray = []
+	array.forEach(function(v) {
+		newArray.unshift(v);
+	})
+	return newArray;
+}
+
 function reverseArrayInPlace(array) {
 	// cut array length in half using Math.floor to round down
 	var last_place = array.length - 1;
