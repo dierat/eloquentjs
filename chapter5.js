@@ -28,7 +28,7 @@ Note that not all the mothers mentioned in the data are themselves present in th
 
 function average(array) {
   function plus(a, b) { return a + b; }
-  return array.reduce(plus) / array.length;
+  	return array.reduce(plus) / array.length;
 }
 
 var byName = {};
@@ -78,7 +78,7 @@ For bonus points, write a function groupBy that abstracts the grouping operation
 
 function average(array) {
   function plus(a, b) { return a + b; }
-  return array.reduce(plus) / array.length;
+  	return array.reduce(plus) / array.length;
 }
 
 function historical_life_expenctancy(array) {
