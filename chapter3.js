@@ -42,6 +42,13 @@ function isEven(n) {
 	else {return isEven(n - 2);}
 }
 
+// rewritten to use ternary
+function isEven2(n) {
+	n = Math.abs(n);
+	return n <= 1 ? n == 0 : isEven(n - 2);
+}
+
+
 
 
 /*
