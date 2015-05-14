@@ -11,6 +11,9 @@ function min(a,b) {
 	else {return b;}
 }
 
+// rewritten using ternary
+function min2(a,b) {return a < b ? a : b;}
+
 
 
 /*
