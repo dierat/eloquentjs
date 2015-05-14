@@ -68,3 +68,8 @@ function countChar(s, c) {
 	return count;
 }
 
+// rewritten to use higher-order function in place of loop
+function countChar2(s, c) {
+	return s.split('').filter(function(v){return v == c;}).length;
+}
+
