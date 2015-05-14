@@ -37,6 +37,11 @@ function sum(array) {
 	return total;
 }
 
+// rewritten to use a higher order function in place of loop
+function sum2(array) {
+	return array.reduce(function(a, b) {return a + b;});
+}
+
 
 console.log(sum(range(1, 10)));
 // → 55
